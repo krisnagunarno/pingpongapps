@@ -1,5 +1,5 @@
 # Pingpong-app Deployment on Minikube
-
+## Deployed and documented by Matius Krisna Gunarno (matiuskrisna24@gmail.com)
 ## Prerequisites
 - Virtual Machine/Cloud instance with installed Docker
 - Machine's minimum specs: 2 CPU, 4GB RAM
@@ -33,7 +33,7 @@
  ```bash	
     sudo apt install conntrack
   ```
-- Start the minikube using vm-driver=docker
+- Start the minikube using vm-driver=docker, and wait for a while.
  ```bash	
     minikube start --vm-driver=docker
   ```
@@ -42,3 +42,38 @@
 - https://kubernetes.io/docs/tasks/tools/install-kubectl/
 - https://minikube.sigs.k8s.io/docs/start/
 
+## Let's get started
+- Activate and deploy the minikube dashboard. For more dashboard picture docs just check at pictures/dashboard
+ ```bash	
+    minikube addons enable dashboard
+    minikube dashboard --url
+  ```
+![dashboard link](https://github.com/krisnagunarno/pingpongapps/blob/main/pictures/snippets/Capture1.JPG)
+- Don't close the terminal session. Open the new session.
+- You will get the link to the dashboard, check in on your browser.
+![Dashboard](https://github.com/krisnagunarno/pingpongapps/blob/main/pictures/dashboard/screencapture-127-0-0-1-35343-api-v1-namespaces-kubernetes-dashboard-services-http-kubernetes-dashboard-proxy-2021-02-25-02_35_07.png)
+- Go to the manifest folder
+- Inspect the files, adjust some things such as docker image with yours.
+- Apply all the yml file
+ ```bash	
+    kubectl apply -f deployment.yml -f service.yml -f ingress-nginx -f configmap.yml
+  ```
+- Check all the minikube service
+ ```bash	
+    minikube service list
+  ```
+![service list](https://github.com/krisnagunarno/pingpongapps/blob/main/pictures/snippets/Capture2.JPG)
+- Try curl command with that highlighted link.
+  ```bash	
+    curl <ip>:<port>; echo
+    curl <ip>:<port>/ping; echo
+  ```
+![pingpong1](https://github.com/krisnagunarno/pingpongapps/blob/main/pictures/snippets/Capture3.JPG)
+- If there is no issue, you can edit /etc/hosts, add new line with "<ip>   pingpong.oke"
+- Try using the "pingpong.oke"
+
+  ```bash
+    curl pingpong.oke; echo
+    curl pingpong.oke/ping; echo
+  ```
+![pingpong2](https://github.com/krisnagunarno/pingpongapps/blob/main/pictures/snippets/Capture4.JPG)
