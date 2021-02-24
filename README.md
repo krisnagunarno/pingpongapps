@@ -37,7 +37,7 @@
  ```bash	
     minikube start --vm-driver=docker
   ```
-- Check the version of kubectl and minikube with "kubectl version" and "minikube version". If there is no any issue you can go to next section.
+- Check the version of kubectl and minikube with "kubectl version" and "minikube version". If there is no any issue you can go to the next section.
 - Things not always just works fine. If you have an issue when installing and operating those commands, check at the links below:
 - https://kubernetes.io/docs/tasks/tools/install-kubectl/
 - https://minikube.sigs.k8s.io/docs/start/
