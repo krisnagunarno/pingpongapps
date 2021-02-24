@@ -51,8 +51,8 @@
 - Don't close the terminal session. Open the new session.
 - You will get the link to the dashboard, check it on your browser (for more dashboard picture docs just check at pictures/dashboard).
 
-![dashboard link](https://github.com/krisnagunarno/pingpongapps/blob/main/pictures/snippets/Capture1.JPG)
-![Dashboard](https://github.com/krisnagunarno/pingpongapps/blob/main/pictures/dashboard/screencapture-127-0-0-1-35343-api-v1-namespaces-kubernetes-dashboard-services-http-kubernetes-dashboard-proxy-2021-02-25-02_35_07.png)
+   ![dashboard link](https://github.com/krisnagunarno/pingpongapps/blob/main/pictures/snippets/Capture1.JPG)
+   ![Dashboard](https://github.com/krisnagunarno/pingpongapps/blob/main/pictures/dashboard/screencapture-127-0-0-1-35343-api-v1-namespaces-kubernetes-dashboard-services-http-kubernetes-dashboard-proxy-2021-02-25-02_35_07.png)
 
 - Go to the manifest folder
 - Inspect the files, adjust some things such as docker image with yours.
@@ -64,14 +64,14 @@
  ```bash	
     minikube service list
   ```
-![service list](https://github.com/krisnagunarno/pingpongapps/blob/main/pictures/snippets/Capture2.JPG)
+   ![service list](https://github.com/krisnagunarno/pingpongapps/blob/main/pictures/snippets/Capture2.JPG)
 
 - Try curl command with that link.
   ```bash	
     curl <ip>:<port>; echo
     curl <ip>:<port>/ping; echo
   ```
-![pingpong1](https://github.com/krisnagunarno/pingpongapps/blob/main/pictures/snippets/Capture3.JPG)
+   ![pingpong1](https://github.com/krisnagunarno/pingpongapps/blob/main/pictures/snippets/Capture3.JPG)
 
 - If there is no issue, you can edit /etc/hosts, add new line with "<ip>   pingpong.oke"
 - Try using the "pingpong.oke"
@@ -80,4 +80,4 @@
     curl pingpong.oke; echo
     curl pingpong.oke/ping; echo
   ```
-![pingpong2](https://github.com/krisnagunarno/pingpongapps/blob/main/pictures/snippets/Capture4.JPG)
+   ![pingpong2](https://github.com/krisnagunarno/pingpongapps/blob/main/pictures/snippets/Capture4.JPG)
