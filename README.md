@@ -54,6 +54,10 @@
    ![dashboard link](https://github.com/krisnagunarno/pingpongapps/blob/main/pictures/snippets/Capture1.JPG)
    ![Dashboard](https://github.com/krisnagunarno/pingpongapps/blob/main/pictures/dashboard/screencapture-127-0-0-1-35343-api-v1-namespaces-kubernetes-dashboard-services-http-kubernetes-dashboard-proxy-2021-02-25-02_35_07.png)
 
+- Activate ingress within minikube.
+ ```bash	
+    minikube addons enable ingress
+  ```
 - Go to the manifest folder
 - Inspect the files, adjust some things such as docker image with yours.
 - Apply all the yml file
