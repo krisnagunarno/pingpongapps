@@ -56,7 +56,7 @@
 - Inspect the files, adjust some things such as docker image with yours.
 - Apply all the yml file
  ```bash	
-    kubectl apply -f deployment.yml -f service.yml -f ingress-nginx -f configmap.yml
+    kubectl apply -f deployment.yml -f service.yml -f ingress-nginx.yml -f configmap.yml
   ```
 - Check all the minikube service
  ```bash	
